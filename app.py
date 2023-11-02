@@ -70,14 +70,6 @@ def text2speech(message):
     with open('audio.flac','wb') as file:
         file.write(response.content)
 
-
-# picmessage = img2text("couple.png")
-# print(picmessage)
-# story = generate_story(picmessage)
-# print(story)
-# text2speech(story)
-
-
 def main():
     st.set_page_config(page_title="Your image to story")
     st.header("Turn image into story")
@@ -89,7 +81,6 @@ def main():
         print(upload_file.name)
         full_path = os.path.join(os.path.dirname(__file__), 'pics', upload_file.name)
         print(f"The full path is {full_path}")
-        # with open(upload_file.name, "wb") as file:
         with open(full_path, "wb") as file:
             file.write(bytes_data)
         st.image(upload_file, caption='uploaded image', use_column_width= True)
