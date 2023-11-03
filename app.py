@@ -1,5 +1,5 @@
 #img2text
-import Secrets
+# import Secrets
 from transformers import pipeline
 import streamlit as st
 import os
