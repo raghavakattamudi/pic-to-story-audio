@@ -19,7 +19,7 @@ import requests
 # os.environ['OPENAI_API_KEY'] = openai_api_key
 
 openai_api_key = os.environ.get('OPENAI_API_KEY')
-Hf_api_key = os.environ.get('HuggingFace_api_key')
+Hf_api_key = os.environ.get('HUGGINGFACE_API_KEY')
 
 # print(f"openAIKey {openai_api_key}")
 # print(f"HuggingFaceKey {Hf_api_key}")
