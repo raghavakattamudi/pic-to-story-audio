@@ -66,7 +66,7 @@ def text2speech(message):
 
     API_URL = "https://api-inference.huggingface.co/models/espnet/kan-bayashi_ljspeech_vits"
     headers = {"Authorization": f"Bearer {Hf_api_key}"}
-    print(f"Bearer {Hf_api_key}")
+    # print(f"Bearer {Hf_api_key}")
 
     payload = {
          "inputs": message,
