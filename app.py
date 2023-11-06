@@ -13,10 +13,17 @@ import requests
 # openai_api_key = Secret.OPENAI_API_KEY
 # Hf_api_key = Secret.HuggingFace_api_key
 
-openai_api_key = st.secrets["OPENAI_API_KEY"]
-Hf_api_key = st.secrets["HuggingFace_api_key"]
+# openai_api_key = st.secrets["OPENAI_API_KEY"]
+# Hf_api_key = st.secrets["HuggingFace_api_key"]
 
-os.environ['OPENAI_API_KEY'] = openai_api_key
+# os.environ['OPENAI_API_KEY'] = openai_api_key
+
+openai_api_key = os.environ.get('OPENAI_API_KEY')
+Hf_api_key = os.environ.get('HuggingFace_api_key')
+
+# print(f"openAIKey {openai_api_key}")
+# print(f"HuggingFaceKey {Hf_api_key}")
+
 # function to convert image to text
 def img2text(url):
     image_to_text = pipeline("image-to-text",model="Salesforce/blip-image-captioning-base")
